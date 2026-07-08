@@ -1,0 +1,7 @@
+class Solution(object):
+    def maxProfit(self, prices):
+        left = prices.index(min(prices))
+        right = prices.index(max(prices[left:])) #len(prices) - 1
+        print(prices[right], prices[left])
+        return prices[right] - prices[left]
+        
